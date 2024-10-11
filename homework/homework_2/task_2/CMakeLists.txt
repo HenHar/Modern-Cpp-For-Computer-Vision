@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(guessing_game)
+project(task_2)
 
 set(CMAKE_CXX_STANDARD 17)
 #  generate compiple commands file
@@ -9,4 +9,4 @@ set(CMAKE_CXX_FLAGS "-Wall")
 ## SET FOLDER
 # set executables folder
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
-add_executable(task_1 src/main.cpp)
+add_executable(task_2 src/task_2.cpp)
