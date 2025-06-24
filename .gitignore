@@ -35,3 +35,7 @@ _deps
 # Ignore all local history of files
 .history
 .ionide
+./homework/homework_5/data/
+/homework/homework_5/build/
+/homework/homework_5/tests/cmake-build-debug/
+/homework/homework_5/tests/data/

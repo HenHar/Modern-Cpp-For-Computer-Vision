@@ -1,4 +1,4 @@
-#include "../include/libs.hpp"
+#include "../include/homework_3.h"
 
 
 void image_browser::AddFullRow(const image_browser::ImageRow &row, bool first_row) {
