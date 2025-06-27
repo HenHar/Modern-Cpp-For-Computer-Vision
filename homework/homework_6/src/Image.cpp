@@ -3,12 +3,13 @@
 //
 
 #include "Image.hpp"
-
+#include <vector>
 #include <algorithm>
 #include <catch2/catch_test_macros.hpp>
 
 #include "io_tools.hpp"
 #include <iostream>
+#include <cmath>
 
 
 namespace igg {
@@ -64,7 +65,27 @@ namespace igg {
         else std::cout << "Failed" << std::endl;
     }
 
-    int Image::getIndex(int row, int col) {
+    std::vector<float> Image::ComputeHistogram(int bins) {
+        std::vector<int> histogram(bins, 0);
+        int max_value = 255;
+        int total_pixel = rows_ * cols_;
+
+        for (const auto &pixel_value : data_) {
+            int bin =  std::ceil(pixel_value * bins / max_value);
+            bin = std::min(bin, bins - 1);
+            histogram[bin]++;
+        }
+
+        std::vector<float> histogram_f;
+        for (const int &num_pixels: histogram) {
+            histogram_f.push_back(static_cast<float>(num_pixels) / total_pixel);
+        }
+
+        return histogram_f;
+    }
+
+
+    int Image::getIndex(int row, int col) const {
         return row * cols_ + col;
     }
 

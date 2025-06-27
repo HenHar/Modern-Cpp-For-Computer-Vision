@@ -22,7 +22,7 @@ void test_image() {
     cout << value << endl;
 
     // change rows to defined value
-    for (int i = 200; i < 300; i++) {
+    for (int i = 100; i < 400; i++) {
         for (int j = 0; j < lenna.cols(); j++) {
             lenna.at(i, j) = 255;
         }
@@ -30,6 +30,13 @@ void test_image() {
     lenna.WriteToPgm("../data/test.ascii.pgm");
     cout << lenna.rows() << " " << lenna.cols() << endl;
 
+
+    // test histogram
+    auto histogram = lenna.ComputeHistogram(10);
+    for (auto &value: histogram) {
+        cout << value << " ";
+    }
+    cout << endl;
 }
 
 int main() {

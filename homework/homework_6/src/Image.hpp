@@ -23,16 +23,24 @@ namespace igg {
 
         uint8_t &at(int row, int col);
 
-        bool FillFromPgm(const std::string& file_name);
-        void WriteToPgm(const std::string& file_name);
+        bool FillFromPgm(const std::string &file_name);
 
+        void WriteToPgm(const std::string &file_name);
+
+        std::vector<float> ComputeHistogram(int bins);
+
+        void DownScale(int scale);
+
+        void UpScale(int scale);
 
     private:
         int rows_;
         int cols_;
         std::vector<uint8_t> data_;
+
         uint8_t getMaxVal();
-        int getIndex(int row, int col);
+
+        int getIndex(int row, int col) const;
     };
 } // igg
 
