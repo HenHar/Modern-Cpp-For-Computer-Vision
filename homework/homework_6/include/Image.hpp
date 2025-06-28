@@ -27,7 +27,7 @@ namespace igg {
 
         void WriteToPgm(const std::string &file_name);
 
-        std::vector<float> ComputeHistogram(int bins);
+        std::vector<float> ComputeHistogram(int bins) const;
 
         void DownScale(int scale);
 

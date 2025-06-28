@@ -1,4 +1,10 @@
+cmake_minimum_required(VERSION 3.31)
+ project(test_homework6)
+
 find_package(GTest REQUIRED)
+
+add_subdirectory(.. parent EXCLUDE_FROM_ALL)
+include_directories(../include)
 
 set(TEST_BINARY ${PROJECT_NAME}_test)
 
