@@ -1,3 +1,5 @@
+.idea
+
 ### CMake ###
 CMakeLists.txt.user
 CMakeCache.txt
@@ -39,3 +41,15 @@ _deps
 /homework/homework_5/build/
 /homework/homework_5/tests/cmake-build-debug/
 /homework/homework_5/tests/data/
+
+# IDE specific build folders
+**/cmake-build-debug/
+**/cmake-build-release/
+**/cmake-build-relwithdebinfo/
+**/cmake-build-minsizerel/
+build/
+.build/
+**/build/
+cmake-build-*/
+**/cmake-build-*/
+
