@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.31)
- project(test_homework6)
+project(test_homework6)
 
 find_package(GTest REQUIRED)
 

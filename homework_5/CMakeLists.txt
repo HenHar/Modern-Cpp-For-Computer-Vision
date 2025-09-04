@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 #set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 
-include_directories(./include/)
+include_directories(include/)
 set(OpenCV_DIR "/home/hendrik/libs/opencv/lib/cmake/opencv4")
 find_package(OpenCV REQUIRED)
 find_package(Catch2 REQUIRED)
